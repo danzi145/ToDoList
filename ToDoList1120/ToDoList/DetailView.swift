@@ -9,6 +9,7 @@ import SwiftUI
  struct DetailView: View {
      @State var todo: ToDo
      
+     
      var body: some View {
          Text("\(todo.description)")
      }
