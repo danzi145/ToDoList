@@ -17,8 +17,8 @@
 		3B7153702B0444FB005937C1 /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B71536E2B0444DD005937C1 /* JsonManager.swift */; };
 		3B7153762B0446C1005937C1 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7153752B0446C1005937C1 /* ListCell.swift */; };
 		3B7153782B0446DC005937C1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7153772B0446DC005937C1 /* DetailView.swift */; };
-		3B7153B82B04E1DF005937C1 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B7153B72B04E1DF005937C1 /* sample.json */; };
 		3BBD00792B0B5240002FA8E3 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD00782B0B5240002FA8E3 /* AddView.swift */; };
+		3BDFEF462B1C87580090A8E8 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BDFEF452B1C87580090A8E8 /* sample.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		3B71536E2B0444DD005937C1 /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
 		3B7153752B0446C1005937C1 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		3B7153772B0446DC005937C1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		3B7153B72B04E1DF005937C1 /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = sample.json; path = ../../../sample.json; sourceTree = "<group>"; };
 		3BBD00782B0B5240002FA8E3 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		3BDFEF452B1C87580090A8E8 /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = sample.json; path = ../../../../../Downloads/sample.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +110,8 @@
 				3B7153402B0443FB005937C1 /* ContentView.swift */,
 				3BBD00782B0B5240002FA8E3 /* AddView.swift */,
 				3B71536E2B0444DD005937C1 /* JsonManager.swift */,
-				3B7153B72B04E1DF005937C1 /* sample.json */,
 				3B7153422B0443FD005937C1 /* Assets.xcassets */,
+				3BDFEF452B1C87580090A8E8 /* sample.json */,
 				3B7153442B0443FD005937C1 /* Preview Content */,
 			);
 			path = ToDoList;
@@ -248,7 +248,7 @@
 			files = (
 				3B7153462B0443FD005937C1 /* Preview Assets.xcassets in Resources */,
 				3B7153432B0443FD005937C1 /* Assets.xcassets in Resources */,
-				3B7153B82B04E1DF005937C1 /* sample.json in Resources */,
+				3BDFEF462B1C87580090A8E8 /* sample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

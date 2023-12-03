@@ -11,7 +11,13 @@ import SwiftUI
      
      
      var body: some View {
-         Text("\(todo.description)")
+         ScrollView {
+             VStack {
+                 Text("\(todo.title)")
+                     .font(.headline)
+                 Text("\(todo.description)")
+             }
+         }
      }
  }
 
@@ -20,5 +26,7 @@ import SwiftUI
          DetailView(todo: ToDo(id: 1, title: "", description: "", completed: true))
      }
  }
+
+
 
 
