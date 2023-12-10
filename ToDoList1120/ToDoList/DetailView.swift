@@ -7,26 +7,30 @@
 import SwiftUI
 
  struct DetailView: View {
-     @State var todo: ToDo
+     @Environment(\.managedObjectContext) private var viewContext
+    var todoData: TodoData
+     //@State var todo: ToDo
      
      
      var body: some View {
          ScrollView {
              VStack {
-                 Text("\(todo.title)")
-                     .font(.headline)
-                 Text("\(todo.description)")
+                 Text("\(todoData.dTitle ?? "")" )
+                  .font(.headline)
+                 Text("\(todoData.dContent ?? "")")
              }
          }
      }
- }
-
- struct DetailView_Previews: PreviewProvider {
-     static var previews: some View {
-         DetailView(todo: ToDo(id: 1, title: "", description: "", completed: true))
+     
+     
+     
+     
+     private func saveChanges() {
+         do {
+             try viewContext.save()
+         } catch {
+             print("Could not save changes: \(error)")
+         }
      }
  }
-
-
-
 
