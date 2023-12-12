@@ -13,9 +13,12 @@ import SwiftUI
 //}
 
 struct AddView: View {
-    @Binding var todoData2: [ToDo]
-    //@EnvironmentObject var todoData: Todolists
-    @State private var titleTextField = ""
+    @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.dismiss) var dismiss
+    
+   // @Binding var todoData: TodoData
+    //@Binding var todoData2: [ToDo]
+    @State var titleTextField = ""
     @State private var ContentTextField = ""
     
     var body: some View {
@@ -43,13 +46,26 @@ struct AddView: View {
         .background(Color(uiColor: .secondarySystemBackground))
         .navigationTitle("Add new item")
     }
-    
     func addNewList() {
-        let inputList = ToDo(id: 1, title: titleTextField, description: ContentTextField, completed: false)
-        todoData2.append(inputList)
-        titleTextField = ""
-        ContentTextField = ""
+        let newTodo = TodoData(context: viewContext)
+        newTodo.dTitle = titleTextField
+        newTodo.dContent = ContentTextField
+        
+        do {
+            try viewContext.save()
+            dismiss()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
     }
+    
+//    func addNewList() {
+//        let inputList = ToDo(id: 1, title: titleTextField, description: ContentTextField, completed: false)
+//        //todoData2.append(inputList)
+//        titleTextField = ""
+//        ContentTextField = ""
+//    }
 }
 
 
@@ -58,5 +74,4 @@ struct AddView: View {
 //#Preview {
 //    AddView(todoData: Binding<[ToDo]>)
 //}
-
 
